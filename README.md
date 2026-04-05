@@ -1,35 +1,20 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# kmp-by-tutorials-notes
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+[Kodeco *Kotlin Multiplatform by Tutorials*](https://www.kodeco.com/) の学習用リポジトリです。
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## プロジェクト一覧
 
-### Build and Run Android Application
+| フォルダ | 内容 |
+|---------|------|
+| [`FindTime/`](FindTime/) | チュートリアル用 KMP（Compose Multiplatform）プロジェクト |
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+今後、別章・別サンプルはルート直下にフォルダを追加する想定です。
 
-### Build and Run iOS Application
+## 開き方
 
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+各フォルダが Gradle プロジェクトのルートです。Android Studio では **`FindTime` フォルダを開いて** ください。
 
----
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+```bash
+cd FindTime
+./gradlew :composeApp:assembleDebug
+```
